@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<main>
+    <h1>Eliminar mi cuenta GX</h1>
+    <a href="~/Home/Index">
+        Regresar a GX.
+    </a>
+    <p>
+        ¿Estás seguro de eliminar su cuenta GX?
+        <br />
+        No podras volver a ingresar a la GamingXprerience.
+    </p>
+    <form method="post" action="~/Home/EliminarCuenta">
+        <input type="text" name="correo" value="@User.Claims.FirstOrDefault(x=>x.Type == "Correo").Value" style="visibility:hidden" />
+        <br />
+        <input type="password" name="contra" placeholder="Contraseña GX" required />
+        <br />
+        @Html.ValidationSummary()
+        <input type="submit" value="Eliminar la Xperiencia Gamer" />
+    </form>
+</main>

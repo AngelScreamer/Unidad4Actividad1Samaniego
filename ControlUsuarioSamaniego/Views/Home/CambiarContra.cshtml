@@ -1,0 +1,23 @@
+﻿@model ControlUsuarioSamaniego.Models.Usuario
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<main>
+    <a href="~/Home/Index">Regresar a mi cuenta.</a>
+    <h1>Cambiar mi contraña GX</h1>
+    <form method="post" action="~/Home/CambiarContra">
+        <p>Contraseña GX actual:</p>
+        <input type="password" name="contra" placeholder="Contraseña GX" asp-for="Contrasena" required />
+        <br />
+        <input type="text" name="correo" value="@User.Claims.FirstOrDefault(x=>x.Type == "Correo").Value" style="visibility:hidden" />
+        <p>Nueva Contraseña GX:</p>
+        <br />
+        <input type="password" name="nuevaContrasena" placeholder="Nueva contraseña" required />
+        <br />
+        <input type="password" name="nvaContrasena" placeholder="Confirme su nueva contraseña" required />
+        @Html.ValidationSummary()
+        <input type="submit" value="Aceptar" />
+    </form>
+</main>

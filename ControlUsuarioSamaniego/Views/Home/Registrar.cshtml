@@ -1,0 +1,26 @@
+﻿@model ControlUsuarioSamaniego.Models.Usuario
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+<main>
+    <h1>Regístrese para la GamingXperience</h1>
+    <p>Para iniciar con la Xperiencia necesitamos tus datos personales:</p>
+    <form method="post" action="~/Home/Registrar">
+        <input type="text" asp-for="Nombre" placeholder="Nombre GX" required />
+        <br />
+        <input type="email" asp-for="Correo" placeholder="Añada nuevo correo GX" required />
+        <br />
+        <input type="password" asp-for="Contrasena" name="contrasena" placeholder="Cree una contraseña GX" required />
+        <br />
+        <input type="password" asp-for="Contrasena" name="contrasena2" placeholder="Confirme su contraseña GX" required />
+        @Html.ValidationSummary()
+        <input type="submit" value="Comenzar" onclick="registrarUsuario()" />
+        <br />
+    </form>
+
+    <p>
+        ¿Ya tienes cuenta?
+        <a href="~/Home/IniciarSesion">Inicia sesión</a>
+    </p>
+</main>

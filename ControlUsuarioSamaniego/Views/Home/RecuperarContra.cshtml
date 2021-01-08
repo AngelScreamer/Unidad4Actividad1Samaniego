@@ -1,0 +1,24 @@
+﻿@model ControlUsuarioSamaniego.Models.Usuario
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<main>
+    <a href="~/Home/IniciarSesion">
+        Regresar al inicio GX
+    </a>
+    <h1>Recuperar contraña GX</h1>
+    <p>
+        Para recuperar su contraseña GX, Es necesario
+        <br />
+        El Correo GX que registró con nosotros.
+        <br />
+        Le envíaremos un correo donde se le explicará como recuperar su contraseña.
+    </p>
+    <form method="post" action="~/Home/RecuperarContra">
+        <input type="email" name="correo" placeholder="Correo GX" required />
+        <br />
+        <input type="submit" value="Enviar correo" />
+    </form>
+</main>

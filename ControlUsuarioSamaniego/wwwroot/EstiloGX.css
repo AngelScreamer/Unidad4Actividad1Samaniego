@@ -1,0 +1,77 @@
+﻿html {
+    background-color: deepskyblue;
+    font-family: 'Yu Gothic UI';
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+input[type=text], input[type=email], input[type=password], input[type=number] {
+    background-color: white;
+    color: deepskyblue;
+    font-size: 20px;
+    font-family: 'Yu Gothic';
+    padding: 3px;
+    margin: 5px;
+    width: 300px;
+}
+footer {
+    background-color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: deepskyblue;
+}
+body {
+    width: 1000px;
+}
+h1, h2 {
+    color: deepskyblue;
+    font-weight: bolder;
+}
+header {
+    background-color: white;
+}
+    header section {
+        text-align: right;
+        float: right;
+        margin-right: 30px;
+    }
+#logo {
+    width: 500px;
+    margin-left: 30px;
+}
+a {
+    color: deepskyblue;
+    font-size: 20px;
+    margin: 5px;
+}
+main {
+    text-align: center;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+table {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+input[type=submit] {
+  
+    background-color: deepskyblue;
+    color: white;
+    font-size: 20px;
+    font-family: 'Yu Gothic';
+    padding: 3px;
+    cursor: pointer;
+    margin: 5px;
+}
+p, label {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+
